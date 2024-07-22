@@ -63,21 +63,22 @@ const InitSurvey = () => {
     };
 
     return (
-        <div>
-            {data.createdBy ?
-                <EditSurvey 
-                    onDataUpdate={handleDataUpdate} 
-                    onSurveyComplete={handleSurveyComplete}
-                    surveyLink={surveyLink}
-                 />
-                :
-                <form onSubmit={handleSubmit}>
-                    <p>Inserisci il tuo nome</p>
-                    <input type="text" value={name} name="name" onChange={handleName} placeholder="Ad esempio (Marco)" required/>
-                    <button type="submit">INIZIA</button>
-                </form>
-            }
-            <Share url={"google.com"}/>
+        <div className="section-container flex flex-col items-center">
+            <div className="init-survey w-full md:w-3/4 lg:w-1/2 text-center pt-9 pb-10 flex flex-col items-center section-container">
+                {data.createdBy ?
+                    <EditSurvey 
+                        onDataUpdate={handleDataUpdate} 
+                        onSurveyComplete={handleSurveyComplete}
+                        surveyLink={surveyLink}
+                    />
+                    :
+                    <form onSubmit={handleSubmit} className="flex flex-col items-center w-full">
+                        <p className="h2 text-primary-dark">Inserisci il tuo nome</p>
+                        <input className="input-text w-full" type="text" value={name} name="name" onChange={handleName} placeholder="Ad esempio (Marco)" required/>
+                        <button type="submit" className="btn btn--primary w-full mt-2">AVANTI</button>
+                    </form>
+                }
+            </div>
         </div>
     );
 }

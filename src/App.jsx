@@ -8,9 +8,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <h1 className='f1'>Quanto mi conosci?</h1>
-        <h1 className='f2'>Quanto mi conosci?</h1>
-        <h1 className='font-sans'>Quanto mi conosci?</h1>
+        <div className='mt-36'></div>
         <Routes>
           <Route path='' element={<InitSurvey />} />
           <Route path='/surveys/:idCode' element={<SurveyPage />} />

@@ -27,16 +27,21 @@ const EditSurvey = ({ onDataUpdate, onSurveyComplete, surveyLink }) => {
             {/* Visualizza solo la domanda corrente */}
             {currentQuestionIndex < QUESTIONS.length  ? (
                 <div key={QUESTIONS[currentQuestionIndex].questionID}>
-                    <p>{QUESTIONS[currentQuestionIndex].question}</p>
-                    {/* Genera i pulsanti per le opzioni della domanda corrente */}
-                    {QUESTIONS[currentQuestionIndex].options.map((option) => (
+                    <p className="h2">{QUESTIONS[currentQuestionIndex].question}</p>
+                    <div className="flex flex-wrap gap-3 items-center justify-center mt-8">
+                        {/* Genera i pulsanti per le opzioni della domanda corrente */}
+                        {QUESTIONS[currentQuestionIndex].options.map((option) => (
                         <button 
                             key={option} 
                             onClick={() => handleOptionSelect(option)}
+                            className="answer-option w-[48%] lg:w-[31%]"
                         >
-                            {option}
+                            <div className="answer-option__img w-10 h-10 bg-white"></div>
+                            <p>{option}</p>
                         </button>
                     ))}
+                    </div>
+                    
                 </div>
             ) : (
                 <div>

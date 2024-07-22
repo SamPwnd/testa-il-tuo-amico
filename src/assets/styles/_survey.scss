@@ -1,0 +1,18 @@
+.answer-option {
+    border-radius: 50px;
+    background-color: theme('colors.primary.dark');
+    color: theme('colors.white');
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    &__image {
+
+    }
+    &:hover {
+        background-color: #004266;
+        transition: .1s;
+    }
+}
