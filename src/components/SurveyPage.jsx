@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
+import ScoreList from "./ScoreList";
 
 const SurveyPage = () => {
     const { idCode } = useParams();
@@ -31,7 +32,7 @@ const SurveyPage = () => {
         const currentQuestion = survey.questions[currentQuestionIndex];
         setUserAnswers(prevAnswers => ({
             ...prevAnswers,
-            [currentQuestion.questionID]: option
+            [currentQuestion.questionID]: option.text
         }));
 
         if (currentQuestionIndex < survey.questions.length - 1) {
@@ -47,13 +48,17 @@ const SurveyPage = () => {
 
     const calculateScore = async () => {
         let correctAnswers = 0;
-        survey.questions.forEach(question => {
+        for (let i = 0; i < survey.questions.length; i++) {
+            const question = survey.questions[i];
             const userAnswer = userAnswers[question.questionID];
-            if (userAnswer && userAnswer === question.correctOption) {
+            const correctOptionText = question.correctOption; // Testo dell'opzione corretta
+            console.log(`Question: ${question.question}, User Answer: ${userAnswer}, Correct Answer: ${correctOptionText}`);
+            if (userAnswer && userAnswer === correctOptionText) {
                 correctAnswers += 1;
             }
-        });
-
+        }
+    
+        console.log(`Correct Answers: ${correctAnswers}`);
         setScore(correctAnswers);
         setScoreCalculated(true);
 
@@ -69,7 +74,7 @@ const SurveyPage = () => {
 
     if (!survey) {
         return (
-            <div>
+            <div className="flex flex-col items-center justify-center">
                 <p>Caricamento del sondaggio in corso...</p>
                 <Link to="/">Torna alla pagina principale</Link>
             </div>
@@ -78,11 +83,13 @@ const SurveyPage = () => {
 
     if (isNameInputVisible) {
         return (
-            <section>
-                <h1>Inserisci il tuo nome per iniziare il sondaggio</h1>
-                <input type="text" value={userName} onChange={(e) => setUserName(e.target.value)} />
-                <button onClick={() => setIsNameInputVisible(false)}>Inizia il Sondaggio</button>
-                <ScoreList scores={survey.scores} />
+            <section className="section-container flex flex-col items-center">
+                <div className="init-survey w-full md:w-3/4 lg:w-1/2 text-center pt-9 pb-10 flex flex-col items-center section-container">
+                    <p className="h2 text-primary-dark">Inserisci il tuo nome per iniziare il sondaggio</p>
+                    <input className="input-text w-full" type="text" value={userName} onChange={(e) => setUserName(e.target.value)} />
+                    <button className="btn btn--primary w-full mt-2" onClick={() => setIsNameInputVisible(false)}>Inizia il Sondaggio</button>
+                    <ScoreList scores={survey.scores} />
+                </div>
             </section>
         );
     }
@@ -98,7 +105,8 @@ const SurveyPage = () => {
                         <p>{currentQuestion.question}</p>
                         {currentQuestion.options.map((option, index) => (
                             <button key={index} onClick={() => handleOptionSelect(option)}>
-                                {option}
+                                <img src={option.imageUrl} alt={option.text} style={{ width: '50px', height: '50px', marginRight: '10px' }} />
+                                {option.text}
                             </button>
                         ))}
                     </div>
@@ -115,19 +123,5 @@ const SurveyPage = () => {
     );
 };
 
-const ScoreList = ({ scores = [] }) => {
-    const sortedScores = scores.sort((a, b) => b.score - a.score).slice(0, 10);
-
-    return (
-        <div>
-            <h2>Punteggi degli altri utenti (ordinati dal più alto al più basso):</h2>
-            <ul>
-                {sortedScores.map((s, index) => (
-                    <li key={index}>{s.name}: {s.score}</li>
-                ))}
-            </ul>
-        </div>
-    );
-};
 
 export default SurveyPage;

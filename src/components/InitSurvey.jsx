@@ -75,7 +75,7 @@ const InitSurvey = () => {
                     <form onSubmit={handleSubmit} className="flex flex-col items-center w-full">
                         <p className="h2 text-primary-dark">Inserisci il tuo nome</p>
                         <input className="input-text w-full" type="text" value={name} name="name" onChange={handleName} placeholder="Ad esempio (Marco)" required/>
-                        <button type="submit" className="btn btn--primary w-full mt-2">AVANTI</button>
+                        <button type="submit">AVANTI</button>
                     </form>
                 }
             </div>

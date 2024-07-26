@@ -1,5 +1,6 @@
 body {
     @apply bg-white;
+    @apply text-primary-dark;
 }
 
 .section-container {
@@ -7,9 +8,10 @@ body {
 }
 
 .input-text {
-    border-radius: 50px;
+    border-radius: 30px;
     padding: 12px;
     border: 2px solid black;
+    text-align: center;
     &:focus {
         border: 2px solid theme('colors.primary.light');
         outline: 1px solid theme('colors.primary.light');
@@ -18,7 +20,7 @@ body {
 
 .btn {
     padding: 12px;
-    border-radius: 50px;
+    border-radius: 30px;
     font-family: Poppins;
     font-weight: 600;
     font-size: 1.1rem;
@@ -30,6 +32,16 @@ body {
             transition: .1s;
         }
     }
+    &--skip {
+        background: theme('colors.white');
+        color: theme('colors.primary.dark');
+        border: 2px solid theme('colors.primary.dark');
+        padding: 12px 2rem;
+        &:hover {
+            background: #ffffff;
+            transition: .1s;
+        }
+    }
 }
 
 .wa-btn {
@@ -38,7 +50,7 @@ body {
     text-align: center;
     padding: 12px;
     height: 52px;
-    border-radius: 50px;
+    border-radius: 30px;
     position: relative;
     img {
         max-height: 35px;
@@ -52,6 +64,10 @@ body {
     &:focus {
         background-color: #29f474;
     }
+}
+
+.skip-btn {
+
 }
 
 .text-gradient {

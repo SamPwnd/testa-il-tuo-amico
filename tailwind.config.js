@@ -22,6 +22,9 @@ export default {
       fontFamily: {
         sans: ["Poppins", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],
       },
+      screens: {
+        xs: "346px",
+      }
     },
   },
   plugins: [],

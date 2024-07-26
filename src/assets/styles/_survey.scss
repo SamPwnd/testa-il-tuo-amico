@@ -1,5 +1,5 @@
 .answer-option {
-    border-radius: 50px;
+    border-radius: 30px;
     background-color: theme('colors.primary.dark');
     color: theme('colors.white');
     text-align: center;
@@ -7,9 +7,10 @@
     align-items: center;
     justify-items: center;
     flex-direction: column;
-    padding-top: 1rem;
-    &__image {
-
+    padding: 2rem;
+    padding-top: 2.3rem;
+    &__img {
+        border-radius: 30px;
     }
     &:hover {
         background-color: #004266;
