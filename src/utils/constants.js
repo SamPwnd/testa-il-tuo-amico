@@ -36,10 +36,6 @@ export const QUESTIONS = [
                 "imageUrl": "../src/assets/images/violet.webp"
             },
             {
-                "text": "Bordeaux",
-                "imageUrl": "../src/assets/images/bordeaux.webp"
-            },
-            {
                 "text": "Bianco",
                 "imageUrl": "../src/assets/images/white.webp"
             }

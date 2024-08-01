@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { db, dataCollection } from "../firebase";
+import { db } from "../firebase";
 import EditSurvey from "./EditSurvey";
 import { QUESTIONS } from "../utils/constants";
 import Share from "./Share";
-
 
 const InitSurvey = () => {
     const [name, setName] = useState('');
@@ -18,9 +17,22 @@ const InitSurvey = () => {
     });
     const [surveyComplete, setSurveyComplete] = useState(false); // Stato per tracciare il completamento del sondaggio
     const [surveyLink, setSurveyLink] = useState('');
+    const [backgroundColor, setBackgroundColor] = useState(''); // Stato per il colore di sfondo
+
+    const colorMapping = {
+        blu: "#0095b6",
+        rosso: "#FF3F3F",
+        verde: "#3cb371",
+        giallo: "#FFFF00",
+        rosa: "#f0c4d5",
+        ciano: "#afeeee",
+        arancione: "#ffa500",
+        viola: "#7973b9",
+        bianco: "#e7e7e7"
+    };
 
     const handleName = (e) => {
-        setName(e.target.value)
+        setName(e.target.value);
     }
 
     const handleDataUpdate = (questionID, correctOption) => {
@@ -31,20 +43,32 @@ const InitSurvey = () => {
                 : question
         );
         setData(prevData => ({ ...prevData, questions: updatedQuestions }));
+
+        // Cambia il colore di sfondo se è la domanda del colore preferito (supponiamo che questionID 1 sia la domanda del colore preferito)
+        if (questionID === 1) {
+            setBackgroundColor(colorMapping[correctOption.toLowerCase()] || "");
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setData( prevData => ({
+        setData(prevData => ({
             ...prevData,
             createdBy: name
-        }))
+        }));
     }
 
     useEffect(() => {
         if (surveyComplete) {
             async function createNewSurvey() {
-                const newSurvey = { ...data };
+                // Filtra le domande per includere solo quelle con una correctOption non null
+                const filteredQuestions = data.questions.filter(question => question.correctOption !== null);
+
+                const newSurvey = {
+                    ...data,
+                    questions: filteredQuestions
+                };
+
                 try {
                     const docRef = await addDoc(collection(db, "surveys"), newSurvey);
                     const surveyLink = `${window.location.origin}/surveys/${docRef.id}`;
@@ -59,12 +83,15 @@ const InitSurvey = () => {
     }, [surveyComplete, data]);
 
     const handleSurveyComplete = () => {
+        setBackgroundColor("#FDF0D5");
         setSurveyComplete(true);
     };
 
     return (
-        <div className="section-container flex flex-col items-center">
-            <div className="init-survey w-full md:w-3/4 lg:w-1/2 text-center pt-9 pb-10 flex flex-col items-center section-container">
+        <div className="section-container flex flex-col items-center mb-6">
+            <div className="init-survey w-full md:w-3/4 lg:w-1/2 text-center pt-9 pb-10 flex flex-col items-center section-container"
+                style={{ backgroundColor: backgroundColor }}
+            >
                 {data.createdBy ?
                     <EditSurvey 
                         onDataUpdate={handleDataUpdate} 
@@ -73,9 +100,10 @@ const InitSurvey = () => {
                     />
                     :
                     <form onSubmit={handleSubmit} className="flex flex-col items-center w-full">
+                        <h1 className="h1 text-primary-light">CREA IL TUO QUIZ!</h1>
                         <p className="h2 text-primary-dark">Inserisci il tuo nome</p>
                         <input className="input-text w-full" type="text" value={name} name="name" onChange={handleName} placeholder="Ad esempio (Marco)" required/>
-                        <button type="submit">AVANTI</button>
+                        <button type="submit" className="btn btn--primary w-full mt-3">AVANTI</button>
                     </form>
                 }
             </div>

@@ -17,7 +17,8 @@ export default {
           dark: '#003049',
           light: '#5590b4'
         },
-        secondary: '#FDF0D5'
+        secondary: '#FDF0D5',
+        error: '#C1121F'
       },
       fontFamily: {
         sans: ["Poppins", "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"],

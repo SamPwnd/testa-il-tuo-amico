@@ -9,11 +9,22 @@
     flex-direction: column;
     padding: 2rem;
     padding-top: 2.3rem;
+    box-shadow: 4px 4px 6px 0px rgba(0, 0, 0, 0.7);
     &__img {
         border-radius: 30px;
     }
     &:hover {
         background-color: #004266;
         transition: .1s;
+    }
+}
+
+.scores {
+    border: 2px dashed theme('colors.primary.light');
+    border-radius: 30px;
+    &__score {
+        @apply h6;
+        margin-bottom: 0;
+        padding: 4px;
     }
 }

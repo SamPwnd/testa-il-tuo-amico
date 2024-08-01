@@ -15,24 +15,33 @@ const EditSurvey = ({ onDataUpdate, onSurveyComplete, surveyLink }) => {
     const [currentQuestionNum, setCurrentQuestionNum] = useState(0);
     const [shuffledQuestions, setShuffledQuestions] = useState([]);
 
+    console.log(shuffledQuestions);
+    console.log('currentQuestionNum' + ' ' + currentQuestionNum);
     const questionLimit = 10;
-
     const handleOptionSelect = (option) => {
+        const currentQuestion = shuffledQuestions[currentQuestionIndex];
+        
         if (option) {
-            onDataUpdate(shuffledQuestions[currentQuestionIndex].questionID, option.text);
-            setCurrentQuestionNum((prevNum) => prevNum + 1);
-        } else {
-            // Gestisce lo skip della domanda, spostando la domanda saltata alla fine dell'array
+            onDataUpdate(currentQuestion.questionID, option.text);
             setShuffledQuestions((prevQuestions) => {
                 const updatedQuestions = [...prevQuestions];
-                const [question] = updatedQuestions.splice(currentQuestionIndex, 1);
-                updatedQuestions.push(question);
+                updatedQuestions.splice(currentQuestionIndex, 1); // Rimuove la domanda corrente
                 return updatedQuestions;
             });
+            setCurrentQuestionNum((prevNum) => prevNum + 1);
+        } else {
+            // Gestisce lo skip della domanda
+            setShuffledQuestions((prevQuestions) => {
+                const updatedQuestions = [...prevQuestions];
+                const skippedQuestion = updatedQuestions.splice(currentQuestionIndex, 1)[0];
+                updatedQuestions.push(skippedQuestion); // Aggiungi la domanda saltata alla fine
+                return updatedQuestions;
+            });
+            setCurrentQuestionIndex((prevIndex) => prevIndex >= shuffledQuestions.length ? 0 : prevIndex); // Assicurati che l'indice sia valido
         }
 
-        // Passa alla domanda successiva quando l'utente seleziona una risposta
-        setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+        // Passa alla domanda successiva
+        setCurrentQuestionIndex(0)
     };
 
     useEffect(() => {
@@ -76,7 +85,7 @@ const EditSurvey = ({ onDataUpdate, onSurveyComplete, surveyLink }) => {
                             </button>
                         ))}
                     </div>
-                    <button className="btn btn--skip mt-2" onClick={() => handleOptionSelect(null)}>
+                    <button className="btn btn--skip mt-5" onClick={() => handleOptionSelect(null)}>
                         SALTA
                     </button>
                 </div>
