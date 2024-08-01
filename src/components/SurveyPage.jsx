@@ -117,7 +117,7 @@ const SurveyPage = () => {
 
     if (isNameInputVisible) {
         return (
-            <section className="section-container flex flex-col items-center mb-6">
+            <section className="section-container flex flex-col items-center mb-20">
                 <div className="init-survey w-full md:w-3/4 lg:w-1/2 text-center pt-9 pb-10 flex flex-col items-center section-container"
                     style={{ backgroundColor: backgroundColor }}
                 >
@@ -136,7 +136,7 @@ const SurveyPage = () => {
     return (
         <div>
             {score == null ? (
-                <section className="section-container flex flex-col items-center mb-6">
+                <section className="section-container flex flex-col items-center mb-20">
                     <div 
                         className="init-survey w-full md:w-3/4 lg:w-1/2 text-center pt-9 pb-10 flex flex-col items-center section-container"
                         style={{ backgroundColor: backgroundColor }} // Applica dinamicamente il colore di sfondo
@@ -166,7 +166,7 @@ const SurveyPage = () => {
                     </div>
                 </section>
             ) : (
-                <section className="section-container flex flex-col items-center mb-6">
+                <section className="section-container flex flex-col items-center mb-20">
                     <div className="init-survey w-full md:w-3/4 lg:w-1/2 text-center pt-9 pb-10 flex flex-col items-center section-container">
                         <h1 className="h6">Complimenti! Hai completato il quiz.</h1>
                         <p className="h5">Il tuo punteggio: <span className="h4 text-primary-light">{score}</span> / {survey.questions.length}</p>

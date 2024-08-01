@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase";
 import EditSurvey from "./EditSurvey";
-import { QUESTIONS } from "../utils/constants";
+import { QUESTIONS } from "../utils/questions";
+import colorMapping from "../utils/colorMapping";
 import Share from "./Share";
 
 const InitSurvey = () => {
@@ -18,18 +19,6 @@ const InitSurvey = () => {
     const [surveyComplete, setSurveyComplete] = useState(false); // Stato per tracciare il completamento del sondaggio
     const [surveyLink, setSurveyLink] = useState('');
     const [backgroundColor, setBackgroundColor] = useState(''); // Stato per il colore di sfondo
-
-    const colorMapping = {
-        blu: "#0095b6",
-        rosso: "#FF3F3F",
-        verde: "#3cb371",
-        giallo: "#FFFF00",
-        rosa: "#f0c4d5",
-        ciano: "#afeeee",
-        arancione: "#ffa500",
-        viola: "#7973b9",
-        bianco: "#e7e7e7"
-    };
 
     const handleName = (e) => {
         setName(e.target.value);
@@ -88,7 +77,7 @@ const InitSurvey = () => {
     };
 
     return (
-        <div className="section-container flex flex-col items-center mb-6">
+        <div className="section-container flex flex-col items-center mb-20">
             <div className="init-survey w-full md:w-3/4 lg:w-1/2 text-center pt-9 pb-10 flex flex-col items-center section-container"
                 style={{ backgroundColor: backgroundColor }}
             >

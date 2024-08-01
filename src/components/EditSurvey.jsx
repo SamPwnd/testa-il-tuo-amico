@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { QUESTIONS } from "../utils/constants";
+import { QUESTIONS } from "../utils/questions";
 import Share from "./Share";
 
 const shuffleArray = (array) => {
