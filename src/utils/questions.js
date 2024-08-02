@@ -5,11 +5,11 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Rosso",
-                "imageUrl": "../src/assets/images/red.webp"
+                "imageUrl": "./assets/images/red.webp"
             },
             {
                 "text": "Blu",
-                "imageUrl": "../src/assets/images/blue.webp"
+                "imageUrl": "assets/images/blue.webp"
             },
             {
                 "text": "Giallo",
