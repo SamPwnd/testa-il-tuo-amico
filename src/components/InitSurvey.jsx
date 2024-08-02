@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../firebase";
 import EditSurvey from "./EditSurvey";
+import AdsComponent from "./AdsComponent";
 import { QUESTIONS } from "../utils/questions";
 import colorMapping from "../utils/colorMapping";
 import Share from "./Share";
@@ -79,6 +80,9 @@ const InitSurvey = () => {
 
     return (
         <div className="section-container flex flex-col items-center mb-20">
+            <aside>
+                <AdsComponent dataAdSlot='1111176465' />
+            </aside>
             <div className="init-survey w-full md:w-3/4 lg:w-1/2 text-center pt-9 pb-10 flex flex-col items-center section-container"
                 style={{ backgroundColor: backgroundColor }}
             >
