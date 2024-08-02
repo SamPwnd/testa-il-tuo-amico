@@ -13,7 +13,7 @@ export const QUESTIONS = [
             },
             {
                 "text": "Giallo",
-                "imageUrl": "../src/assets/images/yellow.webp"
+                "imageUrl": "/assets/images/yellow.webp"
             },
             {
                 "text": "Verde",
