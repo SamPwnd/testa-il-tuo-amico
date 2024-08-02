@@ -8,7 +8,7 @@ const Header = () => {
             <div className="flex items-center justify-between">
                 <div className="header__logo max-w-64 md:max-w-80">
                     <Link to="/">
-                        <img loading="lazy" src="../src/assets/images/logo-transparent.svg" alt="TestaIlTuoAmico" />
+                        <img loading="lazy" src="./assets/images/logo-transparent.svg" alt="TestaIlTuoAmico" />
                     </Link>
                 </div>
                 <nav className="flex">

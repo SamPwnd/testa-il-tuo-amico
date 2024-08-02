@@ -9,35 +9,35 @@ export const QUESTIONS = [
             },
             {
                 "text": "Blu",
-                "imageUrl": "assets/images/blue.webp"
+                "imageUrl": "./assets/images/blue.webp"
             },
             {
                 "text": "Giallo",
-                "imageUrl": "/assets/images/yellow.webp"
+                "imageUrl": "./assets/images/yellow.webp"
             },
             {
                 "text": "Verde",
-                "imageUrl": "../src/assets/images/green.webp"
+                "imageUrl": "./assets/images/green.webp"
             },
             {
                 "text": "Rosa",
-                "imageUrl": "../src/assets/images/pink.webp"
+                "imageUrl": "./assets/images/pink.webp"
             },
             {
                 "text": "Ciano",
-                "imageUrl": "../src/assets/images/cyan.webp"
+                "imageUrl": "./assets/images/cyan.webp"
             },
             {
                 "text": "Arancione",
-                "imageUrl": "../src/assets/images/orange.webp"
+                "imageUrl": "./assets/images/orange.webp"
             },
             {
                 "text": "Viola",
-                "imageUrl": "../src/assets/images/violet.webp"
+                "imageUrl": "./assets/images/violet.webp"
             },
             {
                 "text": "Bianco",
-                "imageUrl": "../src/assets/images/white.webp"
+                "imageUrl": "./assets/images/white.webp"
             }
         ],
         
@@ -48,27 +48,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Rock",
-                "imageUrl": "../src/assets/images/rock.webp"
+                "imageUrl": "./assets/images/rock.webp"
             },
             {
                 "text": "Pop",
-                "imageUrl": "../src/assets/images/pop.webp"
+                "imageUrl": "./assets/images/pop.webp"
             },
             {
                 "text": "Rap/Hip Hop",
-                "imageUrl": "../src/assets/images/rap.webp"
+                "imageUrl": "./assets/images/rap.webp"
             },
             {
                 "text": "Elettronica",
-                "imageUrl": "../src/assets/images/edm.webp"
+                "imageUrl": "./assets/images/edm.webp"
             },
             {
                 "text": "Classica",
-                "imageUrl": "../src/assets/images/classic.webp"
+                "imageUrl": "./assets/images/classic.webp"
             },
             {
                 "text": "Altro/Misto",
-                "imageUrl": "../src/assets/images/idk.webp"
+                "imageUrl": "./assets/images/idk.webp"
             }
         ],
     },
@@ -78,27 +78,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Calcio",
-                "imageUrl": "../src/assets/images/calcio.webp"
+                "imageUrl": "./assets/images/calcio.webp"
             },
             {
                 "text": "Basket",
-                "imageUrl": "../src/assets/images/basket.webp"
+                "imageUrl": "./assets/images/basket.webp"
             },
             {
                 "text": "Tennis",
-                "imageUrl": "../src/assets/images/tennis.webp"
+                "imageUrl": "./assets/images/tennis.webp"
             },
             {
                 "text": "Nuoto",
-                "imageUrl": "../src/assets/images/swim.webp"
+                "imageUrl": "./assets/images/swim.webp"
             },
             {
                 "text": "Pallavolo",
-                "imageUrl": "../src/assets/images/volley.webp"
+                "imageUrl": "./assets/images/volley.webp"
             },
             {
                 "text": "Atletica",
-                "imageUrl": "../src/assets/images/athletic.webp"
+                "imageUrl": "./assets/images/athletic.webp"
             }
         ],
     },
@@ -108,27 +108,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Cane",
-                "imageUrl": "../src/assets/images/dog.webp"
+                "imageUrl": "./assets/images/dog.webp"
             },
             {
                 "text": "Gatto",
-                "imageUrl": "../src/assets/images/cat.webp"
+                "imageUrl": "./assets/images/cat.webp"
             },
             {
                 "text": "Lupo",
-                "imageUrl": "../src/assets/images/wolf.webp"
+                "imageUrl": "./assets/images/wolf.webp"
             },
             {
                 "text": "Leone",
-                "imageUrl": "../src/assets/images/lion.webp"
+                "imageUrl": "./assets/images/lion.webp"
             },
             {
                 "text": "Scimmia",
-                "imageUrl": "../src/assets/images/monkey.webp"
+                "imageUrl": "./assets/images/monkey.webp"
             },
             {
                 "text": "Cavallo",
-                "imageUrl": "../src/assets/images/horse.webp"
+                "imageUrl": "./assets/images/horse.webp"
             }
         ],
     },
@@ -138,27 +138,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Pizza",
-                "imageUrl": "../src/assets/images/pizza.webp"
+                "imageUrl": "./assets/images/pizza.webp"
             },
             {
                 "text": "Hamburger",
-                "imageUrl": "../src/assets/images/burger.webp"
+                "imageUrl": "./assets/images/burger.webp"
             },
             {
                 "text": "Sushi",
-                "imageUrl": "../src/assets/images/sushi.webp"
+                "imageUrl": "./assets/images/sushi.webp"
             },
             {
                 "text": "Pasta",
-                "imageUrl": "../src/assets/images/pasta.webp"
+                "imageUrl": "./assets/images/pasta.webp"
             },
             {
                 "text": "Pesce",
-                "imageUrl": "../src/assets/images/fish.webp"
+                "imageUrl": "./assets/images/fish.webp"
             },
             {
                 "text": "Pollo",
-                "imageUrl": "../src/assets/images/chicken.webp"
+                "imageUrl": "./assets/images/chicken.webp"
             }
         ],
     },
@@ -168,19 +168,19 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Inverno",
-                "imageUrl": "../src/assets/images/winter.webp"
+                "imageUrl": "./assets/images/winter.webp"
             },
             {
                 "text": "Primavera",
-                "imageUrl": "../src/assets/images/spring.webp"
+                "imageUrl": "./assets/images/spring.webp"
             },
             {
                 "text": "Estate",
-                "imageUrl": "../src/assets/images/summer.webp"
+                "imageUrl": "./assets/images/summer.webp"
             },
             {
                 "text": "Autunno",
-                "imageUrl": "../src/assets/images/autumn.webp"
+                "imageUrl": "./assets/images/autumn.webp"
             },
         ],
     },
@@ -190,27 +190,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Impero Romano",
-                "imageUrl": "../src/assets/images/roma.webp"
+                "imageUrl": "./assets/images/roma.webp"
             },
             {
                 "text": "Medioevo",
-                "imageUrl": "../src/assets/images/medio.webp"
+                "imageUrl": "./assets/images/medio.webp"
             },
             {
                 "text": "Rinascimento",
-                "imageUrl": "../src/assets/images/rinasc.webp"
+                "imageUrl": "./assets/images/rinasc.webp"
             },
             {
                 "text": "Antica Grecia",
-                "imageUrl": "../src/assets/images/grecia.webp"
+                "imageUrl": "./assets/images/grecia.webp"
             },
             {
                 "text": "Antico Egitto",
-                "imageUrl": "../src/assets/images/egitto.webp"
+                "imageUrl": "./assets/images/egitto.webp"
             },
             {
                 "text": "Preistoria",
-                "imageUrl": "../src/assets/images/preistoria.webp"
+                "imageUrl": "./assets/images/preistoria.webp"
             },
         ],
     },
@@ -220,27 +220,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Parigi",
-                "imageUrl": "../src/assets/images/paris.webp"
+                "imageUrl": "./assets/images/paris.webp"
             },
             {
                 "text": "Los Angeles",
-                "imageUrl": "../src/assets/images/la.webp"
+                "imageUrl": "./assets/images/la.webp"
             },
             {
                 "text": "Giappone",
-                "imageUrl": "../src/assets/images/japan.webp"
+                "imageUrl": "./assets/images/japan.webp"
             },
             {
                 "text": "Hawaii",
-                "imageUrl": "../src/assets/images/hawaii.webp"
+                "imageUrl": "./assets/images/hawaii.webp"
             },
             {
                 "text": "Spagna",
-                "imageUrl": "../src/assets/images/spain.webp"
+                "imageUrl": "./assets/images/spain.webp"
             },
             {
                 "text": "Londra",
-                "imageUrl": "../src/assets/images/london.webp"
+                "imageUrl": "./assets/images/london.webp"
             },
         ],
     },
@@ -250,27 +250,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Invisibilità",
-                "imageUrl": "../src/assets/images/inv.webp"
+                "imageUrl": "./assets/images/inv.webp"
             },
             {
                 "text": "Teletrasporto",
-                "imageUrl": "../src/assets/images/tp.webp"
+                "imageUrl": "./assets/images/tp.webp"
             },
             {
                 "text": "Volare",
-                "imageUrl": "../src/assets/images/fly.webp"
+                "imageUrl": "./assets/images/fly.webp"
             },
             {
                 "text": "Telecinesi",
-                "imageUrl": "../src/assets/images/telcin.webp"
+                "imageUrl": "./assets/images/telcin.webp"
             },
             {
                 "text": "Lettura del pensiero",
-                "imageUrl": "../src/assets/images/brain.webp"
+                "imageUrl": "./assets/images/brain.webp"
             },
             {
                 "text": "Immortalità",
-                "imageUrl": "../src/assets/images/godmode.webp"
+                "imageUrl": "./assets/images/godmode.webp"
             },
         ],
     },
@@ -280,11 +280,11 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Iphone",
-                "imageUrl": "../src/assets/images/iphone.webp"
+                "imageUrl": "./assets/images/iphone.webp"
             },
             {
                 "text": "Android",
-                "imageUrl": "../src/assets/images/android.webp"
+                "imageUrl": "./assets/images/android.webp"
             }
         ],
     },
@@ -294,11 +294,11 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Mare",
-                "imageUrl": "../src/assets/images/sea.webp"
+                "imageUrl": "./assets/images/sea.webp"
             },
             {
                 "text": "Montagna",
-                "imageUrl": "../src/assets/images/mount.webp"
+                "imageUrl": "./assets/images/mount.webp"
             },
         ],
     },
@@ -308,27 +308,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Star Wars",
-                "imageUrl": "../src/assets/images/starwars.webp"
+                "imageUrl": "./assets/images/starwars.webp"
             },
             {
                 "text": "Titanic",
-                "imageUrl": "../src/assets/images/titanic.webp"
+                "imageUrl": "./assets/images/titanic.webp"
             },
             {
                 "text": "Il Signore degli Anelli",
-                "imageUrl": "../src/assets/images/lotr.webp"
+                "imageUrl": "./assets/images/lotr.webp"
             },
             {
                 "text": "Il Silenzio degli Innocenti",
-                "imageUrl": "../src/assets/images/hannibal.webp"
+                "imageUrl": "./assets/images/hannibal.webp"
             },
             {
                 "text": "Fight Club",
-                "imageUrl": "../src/assets/images/fclub.webp"
+                "imageUrl": "./assets/images/fclub.webp"
             },
             {
                 "text": "Interstellar",
-                "imageUrl": "../src/assets/images/interstellar.webp"
+                "imageUrl": "./assets/images/interstellar.webp"
             },
         ],
     },
@@ -338,19 +338,19 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Mattina",
-                "imageUrl": "../src/assets/images/morning.webp"
+                "imageUrl": "./assets/images/morning.webp"
             },
             {
                 "text": "Pomeriggio",
-                "imageUrl": "../src/assets/images/afternoon.webp"
+                "imageUrl": "./assets/images/afternoon.webp"
             },
             {
                 "text": "Sera",
-                "imageUrl": "../src/assets/images/evening.webp"
+                "imageUrl": "./assets/images/evening.webp"
             },
             {
                 "text": "Notte",
-                "imageUrl": "../src/assets/images/night.webp"
+                "imageUrl": "./assets/images/night.webp"
             },
         ],
     },
@@ -360,27 +360,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Lionel Messi",
-                "imageUrl": "../src/assets/images/messi.webp"
+                "imageUrl": "./assets/images/messi.webp"
             },
             {
                 "text": "Michael Schumacher",
-                "imageUrl": "../src/assets/images/schumi.webp"
+                "imageUrl": "./assets/images/schumi.webp"
             },
             {
                 "text": "Jannik Sinner",
-                "imageUrl": "../src/assets/images/sinner.webp"
+                "imageUrl": "./assets/images/sinner.webp"
             },
             {
                 "text": "Michael Jordan",
-                "imageUrl": "../src/assets/images/jordan.webp"
+                "imageUrl": "./assets/images/jordan.webp"
             },
             {
                 "text": "Federica Pellegrini",
-                "imageUrl": "../src/assets/images/pellegrini.webp"
+                "imageUrl": "./assets/images/pellegrini.webp"
             },
             {
                 "text": "Usain Bolt",
-                "imageUrl": "../src/assets/images/bolt.webp"
+                "imageUrl": "./assets/images/bolt.webp"
             },
         ],
     },
@@ -390,11 +390,11 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "C. Ronaldo",
-                "imageUrl": "../src/assets/images/cronaldo.webp"
+                "imageUrl": "./assets/images/cronaldo.webp"
             },
             {
                 "text": "Messi",
-                "imageUrl": "../src/assets/images/messi.webp"
+                "imageUrl": "./assets/images/messi.webp"
             },
         ],
     },
@@ -404,15 +404,15 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Cane",
-                "imageUrl": "../src/assets/images/dog.webp"
+                "imageUrl": "./assets/images/dog.webp"
             },
             {
                 "text": "Gatto",
-                "imageUrl": "../src/assets/images/cat.webp"
+                "imageUrl": "./assets/images/cat.webp"
             },
             {
                 "text": "Entrambi",
-                "imageUrl": "../src/assets/images/dogcat.webp"
+                "imageUrl": "./assets/images/dogcat.webp"
             },
         ],
     },
@@ -422,27 +422,27 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Stranger Things",
-                "imageUrl": "../src/assets/images/st.webp"
+                "imageUrl": "./assets/images/st.webp"
             },
             {
                 "text": "Game Of Thrones",
-                "imageUrl": "../src/assets/images/got.webp"
+                "imageUrl": "./assets/images/got.webp"
             },
             {
                 "text": "Lost",
-                "imageUrl": "../src/assets/images/lost.webp"
+                "imageUrl": "./assets/images/lost.webp"
             },
             {
                 "text": "Friends",
-                "imageUrl": "../src/assets/images/friends.webp"
+                "imageUrl": "./assets/images/friends.webp"
             },
             {
                 "text": "How I Met Your Mother",
-                "imageUrl": "../src/assets/images/himym.webp"
+                "imageUrl": "./assets/images/himym.webp"
             },
             {
                 "text": "The Walking Dead",
-                "imageUrl": "../src/assets/images/twd.webp"
+                "imageUrl": "./assets/images/twd.webp"
             },
         ],
     },
@@ -452,11 +452,11 @@ export const QUESTIONS = [
         options: [
             {
                 "text": "Lamborghini",
-                "imageUrl": "../src/assets/images/lambo.webp"
+                "imageUrl": "./assets/images/lambo.webp"
             },
             {
                 "text": "Ferrari",
-                "imageUrl": "../src/assets/images/ferrari.webp"
+                "imageUrl": "./assets/images/ferrari.webp"
             },
         ],
     },
