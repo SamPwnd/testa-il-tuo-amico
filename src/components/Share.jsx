@@ -19,7 +19,7 @@ const Share = ({url}) => {
             <a className="text-primary-light whitespace-normal break-words h6 pb-2" href={url}>{url}</a>
             <a href={waStatusLink}>
                 <button className="wa-btn">
-                    <img loading="lazy" src="../src/assets/images/whatsapp.png" height="28" alt="Condividi su WhatsApp" />
+                    <img loading="lazy" src="./images/whatsapp.png" height="28" alt="Condividi su WhatsApp" />
                 </button>
             </a>
             <div className="mt-4 flex gap-3 justify-center">
