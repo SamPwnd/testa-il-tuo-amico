@@ -18,5 +18,5 @@ const app = initializeApp(firebaseConfig);
 
 // Initialize Firestore
 export const db = getFirestore(app);
-export const dataCollection = collection(db, "surveys");
+export const dataCollection = collection(db, "quizes");
 const analytics = getAnalytics(app);

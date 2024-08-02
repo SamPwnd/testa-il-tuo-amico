@@ -33,7 +33,7 @@ const SurveyPage = () => {
 
     useEffect(() => {
         const fetchSurvey = async () => {
-            const docRef = doc(db, "surveys", idCode);
+            const docRef = doc(db, "quizes", idCode);
             const docSnap = await getDoc(docRef);
             if (docSnap.exists()) {
                 setSurvey(docSnap.data());
@@ -99,7 +99,7 @@ const SurveyPage = () => {
         const userScore = { name: userName, score: correctAnswers };
         const updatedScores = survey.scores ? [...survey.scores, userScore] : [userScore];
 
-        const surveyRef = doc(db, "surveys", idCode);
+        const surveyRef = doc(db, "quizes", idCode);
         await updateDoc(surveyRef, { scores: updatedScores });
 
         setSurvey(prevSurvey => ({ ...prevSurvey, scores: updatedScores }));

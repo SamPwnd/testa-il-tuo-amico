@@ -12,7 +12,7 @@ function App() {
         <div className='mt-36'></div>
         <Routes>
           <Route path='' element={<InitSurvey />} />
-          <Route path='/surveys/:idCode' element={<SurveyPage />} />
+          <Route path='/quizes/:idCode' element={<SurveyPage />} />
         </Routes>
         <Footer />
       </HashRouter>

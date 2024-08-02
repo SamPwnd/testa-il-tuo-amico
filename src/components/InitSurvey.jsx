@@ -59,8 +59,8 @@ const InitSurvey = () => {
                 };
 
                 try {
-                    const docRef = await addDoc(collection(db, "surveys"), newSurvey);
-                    const surveyLink = `${window.location.origin}/surveys/${docRef.id}`;
+                    const docRef = await addDoc(collection(db, "quizes"), newSurvey);
+                    const surveyLink = `${window.location.origin}/#/quizes/${docRef.id}`;
                     setSurveyLink(surveyLink);
                     console.log('Survey successfully added:', newSurvey);
                 } catch (error) {
