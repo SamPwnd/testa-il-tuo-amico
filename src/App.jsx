@@ -2,12 +2,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import InitSurvey from './components/InitSurvey'
 import SurveyPage from './components/SurveyPage';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
         <div className='mt-36'></div>
         <Routes>
@@ -15,7 +15,7 @@ function App() {
           <Route path='/surveys/:idCode' element={<SurveyPage />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
