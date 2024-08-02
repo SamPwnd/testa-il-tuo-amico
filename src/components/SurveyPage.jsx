@@ -69,6 +69,7 @@ const SurveyPage = () => {
 
             if (currentQuestionIndex < survey.questions.length - 1) {
                 setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+                window.scrollTo(0, 0); // Scrolla all'inizio della pagina
             }
         }, 650); // Attende prima di passare alla domanda successiva
     };

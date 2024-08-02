@@ -20,7 +20,8 @@ const EditSurvey = ({ onDataUpdate, onSurveyComplete, surveyLink }) => {
     const questionLimit = 10;
     const handleOptionSelect = (option) => {
         const currentQuestion = shuffledQuestions[currentQuestionIndex];
-        
+
+        window.scrollTo(0, 0); // Scrolla all'inizio della pagina
         if (option) {
             onDataUpdate(currentQuestion.questionID, option.text);
             setShuffledQuestions((prevQuestions) => {
