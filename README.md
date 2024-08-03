@@ -8,7 +8,7 @@ https://sampwnd.github.io/testa-il-tuo-amico
 
 ## Descrizione
 
-Quiz Challenge ti permette di creare quiz. Dopo aver creato il quiz, viene generato un link univoco che puoi condividere con i tuoi amici e vedere il loro punteggio. I tuoi amici possono aprire il link, rispondere alle domande del quiz e vedere il loro punteggio finale in una classifica che mostra i punteggi di tutti i partecipanti.
+TestaIlTuoAmico ti permette di creare quiz. Dopo aver creato il quiz, viene generato un link univoco che puoi condividere con i tuoi amici e vedere il loro punteggio. I tuoi amici possono aprire il link, rispondere alle domande del quiz e vedere il loro punteggio finale in una classifica che mostra i punteggi di tutti i partecipanti.
 
 ## Funzionalità
 
