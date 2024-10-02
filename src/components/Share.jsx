@@ -17,7 +17,7 @@ const Share = ({url}) => {
         <section className="flex flex-col max-w-full">
             <h3 className="h3 text-primary-dark mb-3"><span className="text-gradient">Condividi il link, fai rispondere i tuoi amici!</span></h3>
             <a className="text-primary-light whitespace-normal break-words h6 pb-2" href={url}>{url}</a>
-            <a href={waStatusLink}>
+            <a href={link}>
                 <button className="wa-btn">
                     <img loading="lazy" src="./images/whatsapp.png" height="28" alt="Condividi su WhatsApp" />
                 </button>
